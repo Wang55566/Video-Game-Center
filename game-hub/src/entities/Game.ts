@@ -9,6 +9,7 @@ export default interface Game {
   genres: Genre[];
   publishers: Publisher[];
   description_raw: string;
+  released: string,
   background_image: string;
   parent_platforms: {
     platform: Platform;

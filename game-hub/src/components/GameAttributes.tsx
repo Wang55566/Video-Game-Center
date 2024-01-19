@@ -1,4 +1,4 @@
-import { SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, SimpleGrid, Text } from "@chakra-ui/react";
 import Game from "../entities/Game";
 import CriticScore from "./CriticScore";
 import DefinitionItem from "./DefinitionItem";
@@ -27,6 +27,9 @@ const GameAttributes = ({ game }: Props) => {
         {game.publishers?.map((publisher) => (
           <Text key={publisher.id}>{publisher.name}</Text>
         ))}
+      </DefinitionItem>
+      <DefinitionItem term='Released'>
+        {game.released}
       </DefinitionItem>
     </SimpleGrid>
   );
