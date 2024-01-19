@@ -13,6 +13,7 @@ interface GameQueryStore {
   setGenreId: (genreId: number) => void;
   setPlatformId: (platformId: number) => void;
   setSortOrder: (sortOrder: string) => void;
+  clearSearch: () => void;
 }
 
 const useGameQueryStore = create<GameQueryStore>((set) => ({
@@ -24,6 +25,7 @@ const useGameQueryStore = create<GameQueryStore>((set) => ({
     set((store) => ({ gameQuery: { ...store.gameQuery, platformId } })),
   setSortOrder: (sortOrder) =>
     set((store) => ({ gameQuery: { ...store.gameQuery, sortOrder } })),
+  clearSearch: () => set(() => ({ gameQuery: { searchText: "" } })),
 }));
 
 export default useGameQueryStore;

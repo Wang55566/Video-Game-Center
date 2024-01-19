@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   HStack,
   Heading,
@@ -10,6 +11,7 @@ import {
 import useGenres from "../hooks/useGenres";
 import getCroppedImageUrl from "../services/image-url";
 import useGameQueryStore from "../store";
+import ColorModeSwitch from "./ColorModeSwitch";
 
 const GenreList = () => {
   const { data, isLoading, error } = useGenres();
@@ -22,6 +24,9 @@ const GenreList = () => {
 
   return (
     <>
+      <Box paddingY={6}>
+        <ColorModeSwitch />
+      </Box>
       <Heading fontSize="2xl" marginBottom={3}>
         Genre
       </Heading>
