@@ -1,6 +1,6 @@
+import { AxiosRequestConfig, CanceledError } from "axios";
 import { useEffect, useState } from "react";
 import { axiosInstance } from "../services/api-client";
-import { AxiosRequestConfig, CanceledError } from "axios";
 
 export interface FetchResponse<T> {
   count: number;
